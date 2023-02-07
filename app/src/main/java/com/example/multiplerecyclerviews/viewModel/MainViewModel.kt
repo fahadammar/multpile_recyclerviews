@@ -1,6 +1,7 @@
 package com.example.multiplerecyclerviews.viewModel
 
 import android.content.Context
+import android.util.Log
 import android.view.View
 import android.widget.LinearLayout
 import androidx.lifecycle.ViewModel
@@ -16,14 +17,21 @@ import com.example.multiplerecyclerviews.model.RecyclerDataRepository
 class MainViewModel(val context: Context) : ViewModel() {
     private val offerAdapter = OfferAdapter(context, RecyclerDataRepository.getOffersData())
     private val clothingAdapter = ClothingAdapter(context, RecyclerDataRepository.getClothingData())
-    private val bestSellerAdapter = BestSellerAdapter(context, RecyclerDataRepository.getBestSellersData())
-    private val bestSeller2Adapter = BestSeller2Adapter(context, RecyclerDataRepository.getBestSellersData_2())
+    private val bestSellerAdapter =
+        BestSellerAdapter(context, RecyclerDataRepository.getBestSellersData())
+    private val bestSeller2Adapter =
+        BestSeller2Adapter(context, RecyclerDataRepository.getBestSellersData_2())
 
-    fun setRecyclerView(recyclerView: RecyclerView, binding: ActivityMainBinding, view: View) {
+    fun setRecyclerView(
+        recyclerView: RecyclerView,
+        binding: ActivityMainBinding,
+        recyclerID: Int
+    ) {
+        Log.d("buddy", "setRecyclerView: setRecyclerView: function is called***")
         recyclerView.setHasFixedSize(true)
         recyclerView.layoutManager =
             LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
-        when (view.id) {
+        when (recyclerID) {
             binding.offerRecyclerView.id -> {
                 recyclerView.adapter = offerAdapter
             }
@@ -35,6 +43,9 @@ class MainViewModel(val context: Context) : ViewModel() {
             }
             binding.bestSeller2RecyclerView.id -> {
                 recyclerView.adapter = bestSeller2Adapter
+            }
+            else -> {
+                Log.d("buddy", "setRecyclerView: WHEN CONDITION ELSE PART EXEC ----")
             }
         }
     }
