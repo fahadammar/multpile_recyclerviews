@@ -9,6 +9,8 @@
         android:id="@+id/imageCard"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:cardElevation="6dp"
+        app:cardCornerRadius="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -25,6 +27,8 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:backgroundTint="@color/red"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
