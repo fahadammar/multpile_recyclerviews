@@ -3,8 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Andoid_Native/MultipleRecyclerViews/app/src/main/res/layout/activity_main.xml" value="0.390625" />
         <entry key="..\:/Andoid_Native/MultipleRecyclerViews/app/src/main/res/layout/best_seller_layout.xml" value="0.38958333333333334" />
         <entry key="..\:/Andoid_Native/MultipleRecyclerViews/app/src/main/res/layout/clothing_layout.xml" value="0.38958333333333334" />
+        <entry key="..\:/Andoid_Native/MultipleRecyclerViews/app/src/main/res/layout/offer_layout.xml" value="0.38958333333333334" />
       </map>
     </option>
   </component>

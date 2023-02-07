@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MultipleRecyclerViews</string>
+    <string name="offer_layout_image">Offer Layout Image</string>
 </resources>
